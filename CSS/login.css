@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --cor-primaria:#6dc3c4;
+    --cor-secundaria:#771d32;
+    --cor-neutra: #fffafa;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+body{
+    background-color: var(--cor-primaria);
+    width: 100%;
+}
+
+.containerLogin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid var(--cor-secundaria);
+    border-radius: 15px;
+    padding: 2rem;
+    background-color: var(--cor-neutra);
+}
+
+ 
+.headerLogin{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.headerLogin h1{
+    margin-bottom: 1rem;
+
+}
+
+.headerLogin a{
+    text-decoration: none;
+    color: var(--cor-neutra);
+    background-color: var(--cor-secundaria);
+    padding: 1.5rem;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 15px;
+    transition: .5s ease;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.headerLogin a:hover{
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-secundaria);
+    color: var(--cor-secundaria);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form label{
+    cursor: pointer;
+    margin: 1rem 0 .3rem 0;
+}
+
+form input{
+    cursor: pointer;
+}
+
+form button{
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-neutra);
+    border-radius: 15px;
+    transition: .5s ease;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+form button:hover{
+    background-color: var(--cor-primaria);
+    color: #771d32;
+    border-color: var(--cor-secundaria);
+}

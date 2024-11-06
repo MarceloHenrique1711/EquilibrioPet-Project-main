@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+:root{
+    --cor-primaria:#09434b;
+    --cor-secundaria:#6dc3c4;
+    --cor-tercearia:#771d32;
+    --cor-neutra: #fffafa;
+    --cor-fundo: #E0F7FA;
+    --cor-bloco:#0087a6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Inter', sans-serif;
+}
+
+header{
+    width: 100%;
+    background-color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header img{
+ width: 7rem;;
+ border-radius: .7rem;
+}
+
+header nav ul{
+    display: flex;
+    gap: 2rem;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--cor-neutra);
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-bottom: 3px solid var(--cor-tercearia);
+    transition: .4s ease;
+}
+
+header nav ul li a:hover{
+    color: var(--cor-secundaria);
+    font-size: 1.2rem;
+}
+
+.btnHeader{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .cadastroExit{
+    text-decoration: none;
+    color: var(--cor-neutra);
+    background-color: var(--cor-secundaria);
+    font-weight: 600;
+    padding: .7rem;
+    border-radius: 10px;
+    transition: .4s ease;
+}
+
+header .cadastroExit:hover{
+    background-color: var(--cor-tercearia);
+    color: var(--cor-secundaria);
+}
+
+#listagemEndereco{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--cor-fundo);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+                0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#listagemEndereco ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#listagemEndereco ul li{
+    border: 2px solid var(--cor-tercearia);
+    border-radius: 15px;
+    padding: .8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 500px){
+    header nav ul li a{
+        display: none;
+    }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leticia Pet</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
+    
+
+    <script src="JS/index.js" defer></script>
+    <script src="JS/cardSwiper.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" ></script>
+
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="containerHeader">
+        <img src="imgIndex/petLogo.jpg" alt="Logo da Clinica" id="logoSite" />
+        <nav class="navBar">
+          <ul class="listNav">
+            <li><a href="#sobreNos">Sobre nós</a></li>
+            <li><a href="#servico">Serviços</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+          </ul>
+        </nav>
+        <div class="acesso">
+          <a href="HTML/cadastro.html" id="linkCadastro">Cadastro</a>
+          <a href="HTML/login.html" id="linkLogin">Login</a>
+        </div>
+
+        <div class="mobileIcon">
+          <button onclick="menuAparecer()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHFJREFUWEdjZBhgwDjA9jOMOmA0BEZDAFcIzGJgYEilQRbFsG/QOqCYgYHBlwYh4IBu5mgiHLQhoMbAwCBFgzRwgNg0MJoNQVnQmAZR0EBsFNDAbuxGDtpcMOAhMOBpYDQbDnhJOOCJcNQBoyEwckIAAEMWCyGfKGTmAAAAAElFTkSuQmCC"/></button>
+        </div>
+
+      </div>
+      <div class="mobileMenu">
+        <ul class="listNav">
+          <li><a href="#sobreNos">Sobre nós</a></li>
+          <li><a href="#servico">Serviços</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href=".contentFooter">Contato</a></li>         
+        </ul>
+        <div class="acessoMobile"></div>
+          <a href="HTML/cadastro.html" id="linkCadastroMobile">Cadastro</a>
+          <a href="HTML/login.html" id="linkLoginMobile">Login</a>
+        </div>
+      </div>
+    </header>
+
+
+    <main>
+
+      <section id="sectionHome">
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="radioBtn" id="radio1" />
+            <input type="radio" name="radioBtn" id="radio2" />
+            <input type="radio" name="radioBtn" id="radio3" />
+            <div class="slide first">
+              <img src="imgIndex/meg.jpg" alt="Cachorrinha meg" />
+            </div>
+            <div class="slide">
+              <img
+                src="imgIndex/megEdocinho.jpg"
+                alt="Mascotes Meg e Docinho"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="imgIndex/megFundocinza.jpg"
+                alt="Mascote Sol"
+                id="megCarrinho"
+              />
+            </div>
+            <div class="autoNavigation">
+              <div class="autoBtn1"></div>
+              <div class="autoBtn2"></div>
+              <div class="autoBtn3"></div>
+            </div>
+          </div>
+
+          <div class="manualNavigation">
+            <label for="radio1" class="manualBtn"></label>
+            <label for="radio2" class="manualBtn"></label>
+            <label for="radio3" class="manualBtn"></label>
+          </div>
+        </div>
+      </section>
+
+      <section id="sectionWelcome">
+        <article id="sobreNos">
+            <div class="contentArticle">
+                <img src="imgIndex/simbolo.png" alt="simbolo Vet">
+                <h1>Seja Bem-Vindo á</h1>
+                <h2>Equilíbrio Pet</h2>
+                <p>Desde 2017 a saúde e o bem-estar do seu pet são a nossa prioridade. Nossa equipe de veterinários experientes e apaixonados está pronta para oferecer os melhores cuidados para os seus amigos de quatro patas.<br>Com um ambiente acolhedor e instalações modernas, garantimos um atendimento de qualidade, desde consultas de rotina até procedimentos especializados.</p>
+                <a href="https://api.whatsapp.com/send/?phone=554333211883&text&type=phone_number&app_absent=0">Contate-nos</a>
+            </div>
+        </article>
+      </section>
+
+      <section id="servico">
+        <h1 id="service">Conheça nossos serviços!</h1>
+        <img src="imgIndex/clinica.jpg" alt="clinica" class="clinicaImg">
+        <div class="containerServices swiper">
+          <div class="cardWrapper">
+            <ul class="cardList swiper-wrapper">
+              <li class="cardItem swiper-slide">
+                <a href="#" class="cardLink">
+                  <img src="imgCard/gatoElogo.jpg" alt="Gato na frente da logo" class="cardImg">
+                  <p class="badge cat">Vet. de gatos</p>
+                  <h2 class="cardDescription">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                  <button class="cardButton material-symbols-outlined">
+                    arrow_forward
+                  </button>
+                </a>
+              </li>
+              <li class="cardItem swiper-slide">
+                <a href="#" class="cardLink">
+                  <img src="imgCard/hotel.jpg" alt="Espaço de hospedagem" class="cardImg">
+                  <p class="badge hotel">Hospedagem</p>
+                  <h2 class="cardDescription">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                  <button class="cardButton material-symbols-outlined">
+                    arrow_forward
+                  </button>
+                </a>
+              </li>
+              <li class="cardItem swiper-slide">
+                <a href="#" class="cardLink">
+                  <img src="imgCard/tosa.jpg" alt="Espaço banho e tosa" class="cardImg">
+                  <p class="badge bath">Banho e tosa</p>
+                  <h2 class="cardDescription">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                  <button class="cardButton material-symbols-outlined">
+                    arrow_forward
+                  </button>
+                </a>
+              </li>
+              <li class="cardItem swiper-slide">
+                <a href="#" class="cardLink">
+                  <img src="imgCard/acupuntura.jpg" alt="Cão fazendo acupunctura" class="cardImg">
+                  <p class="badge acupuncture">Acupuntura</p>
+                  <h2 class="cardDescription">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                  <button class="cardButton material-symbols-outlined">
+                    arrow_forward
+                  </button>
+                </a>
+              </li>
+              <li class="cardItem swiper-slide">
+                <a href="#" class="cardLink">
+                  <img src="imgCard/nutri.jpg" alt="Nutrição" class="cardImg">
+                  <p class="badge nutrition">Nutrição</p>
+                  <h2 class="cardDescription">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                  <button class="cardButton material-symbols-outlined">
+                    arrow_forward
+                  </button>
+                </a>
+              </li>
+              
+            </ul>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="avaliacoes">
+        <div class="introAvaliacoes">
+          <img src="imgAvaliacao/avalia.png" alt="Simbolo de grupo de pessoas">
+          <h1>Nossas avaliações!</h1>
+        </div>
+        <div class="containerAvaliativo">
+          <ul id="avaliacoesGrupo">
+            <li class="avaliacao">
+              <img src="imgAvaliacao/perfil.png" alt="Simbolo de perfil">
+              <h2>Leticia</h2>
+              <img src="imgAvaliacao/estrelas.png" alt="Estrelas de avaliação" class="estrelas">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita culpa ea saepe esse amet modi porro.</p>
+            </li>
+            <li class="avaliacao">
+              <img src="imgAvaliacao/perfil.png" alt="Simbolo de perfil">
+              <h2>Leticia</h2>
+              <img src="imgAvaliacao/estrelas.png" alt="Estrelas de avaliação" class="estrelas">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita culpa ea saepe esse amet modi porro.</p>
+            </li>
+            <li class="avaliacao">
+              <img src="imgAvaliacao/perfil.png" alt="Simbolo de perfil">
+              <h2>Leticia</h2>
+              <img src="imgAvaliacao/estrelas.png" alt="Estrelas de avaliação" class="estrelas">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita culpa ea saepe esse amet modi porro.</p>
+            </li>
+            
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="contentFooter">
+        <div class="bloco">
+          <p class="indice">Contatos:</p>
+     
+          <a href="https://www.instagram.com/equilibriopet/"><img src="svg/bxl-instagram.svg" alt="logo instagram"></a>
+          <a href="https://api.whatsapp.com/send/?phone=554333211883&text&type=phone_number&app_absent=0"><img src="svg/bxl-whatsapp.svg" alt="logo whatsapp"></a>
+        </div>
+        <div class="bloco">
+          <p class="indice">Endereço:</p>
+          <p>av clinica leticia, num 123, São Paulo-SP</p>
+        </div>
+        <div class="bloco">
+          <p class="indice">Horário de funcionamento:</p>
+          <p>Segunda a sexta: 8:00 as 20:00</p>
+          <p>Sábado e domingo: 10:00 as 14:00</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

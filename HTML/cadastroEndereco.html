@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrio Pet</title>
+    <link rel="stylesheet" href="../CSS/cadastroEndereco.css">
+    <script src="../JS/cadastroEndereco.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <img src="../imgIndex/pitucoAmarelo.jpg" alt="">
+        <div class="headerContainer">
+        <div class="titleContainer">
+            <h1>Cadastro de Endereço!</h1>
+            <a href="home.html">Voltar</a>
+        </div>
+        <form>
+            <div class="inputBox">
+                <label for="title">Que endereço é esse?</label>
+                <input type="text" id="title" placeholder="Ex: Minha casa" required>
+            </div>
+            <div class="inputBox">
+                <label for="cep">Digite o CEP:</label>
+                <input type="text" id="cep" placeholder="CEP" required>
+            </div>
+            <div class="inputBox">
+                <label for="rua">Nome da rua:</label>
+                <input type="text" id="rua" placeholder="Rua" required>
+            </div>
+            <div class="inputBox">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" placeholder="123">
+            </div>
+            <div class="inputBox">
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" placeholder="Complemento">
+            </div>
+            <div class="inputBox">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" placeholder="Bairro">
+            </div>
+            <div class="inputBox">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" placeholder="Cidade" required>
+            </div>
+            <div class="inputBox">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" placeholder="Estado" required>
+            </div>
+            <div class="inputBox" id="inputCheck">
+                <input type="checkbox" id="termo"> 
+                <a href="#" id="terms">Aceitar termos de condoções e uso.</a>
+            </div>
+            <div class="buttonCadastro">
+                <button type="button" id="botaoCadastroEndereco" onclick="cadastroEndereco()">Cadastrar Endereço</button>
+            </div>
+            
+        </form>
+        </div>
+    </div>
+</body>
+</html>

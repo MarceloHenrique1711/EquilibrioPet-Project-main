@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+:root{
+    --cor-primaria:#09434b;
+    --cor-secundaria:#6dc3c4;
+    --cor-tercearia:#771d32;
+    --cor-neutra: #fffafa;
+    --cor-bloco:#0087a6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Inter', sans-serif;
+}
+
+
+header{
+    width: 100%;
+    background-color: var(--cor-primaria);
+    padding: 1.3rem 3rem;
+    height: 28rem;
+    z-index: 2;
+}
+
+.mobileIcon{
+    display: none;
+}
+
+.mobileMenu{
+    display: none;
+}
+
+.containerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#logoSite {
+    width: 7%;
+    border-radius: 0.5rem;
+}
+
+.navBar ul{
+    display: flex;
+    list-style: none;
+}
+
+.navBar ul li{
+    padding: 1.5rem;
+}
+
+.navBar ul li a{
+    text-decoration: none;
+    color: var(--cor-neutra);
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: font-size .6s ease-in-out;
+}
+
+.navBar ul li a:hover{
+    font-size: 1.5rem;
+    border-bottom: 5px solid var(--cor-tercearia);
+    border-radius: 2px;
+}
+
+.acesso a{
+    color: var(--cor-neutra);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.acesso #linkCadastro{
+    padding: 0.8rem;
+    transition:font-size .6s ease-in-out;
+}
+
+.acesso #linkCadastro:hover{
+    font-size: 1.5rem;
+    border-left: 5px solid var(--cor-tercearia);
+}
+
+.acesso #linkLogin{
+    padding: 1rem;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+    transition: background-color .7s ease;
+}
+
+.acesso #linkLogin:hover{
+    background-color: var(--cor-tercearia);
+}
+
+#sectionHome{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -47%);
+}
+
+.slider{
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+#megCarrinho{
+    width: 800px;
+    height:454px;
+}
+
+.slides{
+    width: 400%;
+    height: 450px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide{
+    width:800px;
+    border-radius: 10px;
+}
+
+.slide img{
+    border-radius: 10px;
+    width: 800px;
+
+}
+
+.manualNavigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manualBtn{
+    border: 2px solid var(--cor-neutra);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.manualBtn:not(:last-child){
+    margin-right: 1.5rem;
+}
+
+.manualBtn:hover{
+    background-color: var(--cor-neutra);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~.first{
+    margin-left: -50%;
+}
+
+.autoNavigation div{
+    border: 2px solid var(--cor-bloco);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1seg;
+}
+
+.autoNavigation{
+    position: absolute;
+    width: 800px;
+    margin-top: 410px;
+    display: flex;
+    justify-content: center;
+}
+
+.autoNavigation div:not(:last-child){
+    margin-right: 1.5rem;
+}
+
+#radio1:checked ~ .autoNavigation .autoBtn1{
+    background-color: var(--cor-neutra);
+}
+
+#radio2:checked ~ .autoNavigation .autoBtn2{
+    background-color: var(--cor-neutra);
+}
+
+#radio3:checked ~ .autoNavigation .autoBtn3{
+    background-color: var(--cor-neutra);
+}
+
+#sectionWelcome{
+    padding: 11.9rem 3rem 7rem 3rem;
+}
+
+.contentArticle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid var(--cor-tercearia);
+}
+
+.contentArticle h1{
+    font-family: "cursive";
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.contentArticle h2{
+    color: #000;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.contentArticle p{
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.contentArticle a{
+    padding: 1.5rem;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+    transition: background-color .7s ease;
+    color: var(--cor-neutra);
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.contentArticle a:hover{
+    background-color: var(--cor-tercearia);
+}
+
+#servico{
+    position: relative;
+    top: -70px;
+}
+
+#service{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    
+}
+
+
+.clinicaImg{
+    width: 100%;
+    height: 600px;
+    opacity: .7;
+    position: relative;
+}
+
+
+.containerServices{
+    position: absolute;
+    top: -510px;    
+}
+
+
+.cardWrapper{
+    max-width: 1300px;
+    margin-left: 1.7rem;
+    margin-right: 2rem;
+    overflow: hidden;
+}
+
+.cardList .cardItem{
+    list-style: none;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.cardList .cardItem .cardLink{
+    user-select: none;
+    width: 85%;
+    display: block;
+    background-color: rgb(228, 242, 228);
+    border: 4px solid transparent;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: .6s ease;
+}
+
+
+.cardList .cardItem .cardLink:hover{
+    border-color: var(--cor-secundaria);
+}
+
+
+.cardList .cardLink .cardImg{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cardList .cardLink .badge{ 
+    color: var(--cor-secundaria);
+    padding: 8px 16px;
+    font-size: .9rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background-color: var(--cor-tercearia);
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.cardList .cardLink .badge.hotel{
+    background-color: #fdf9a0;
+    color: #da7ef9;
+}
+
+.cardList .cardLink .badge.bath{
+    background-color: #76bed6;
+    color: #FFDAB9;
+}
+
+.cardList .cardLink .badge.acupuncture{
+    background-color: #FFB6C1;
+    color: #8686b3;
+}
+
+.cardList .cardLink .badge.nutrition{
+    background-color: #fbc7a2;
+    color: #c32626;
+}
+
+.cardList .cardLink .cardDescription{
+   font-size: 1.1rem; 
+   color: #000;
+   font-weight: 600;
+   border-top: 2px solid var(--cor-tercearia);
+   padding-top: 4px;
+}
+
+.cardList .cardLink .cardButton{
+    height: 35px;
+    width: 35px;
+    color: var(--cor-primaria);
+    background: none;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    cursor: pointer;
+    border: 2px solid var(--cor-secundaria);
+    transform: rotate(-45deg);
+    transition: .5s ease;
+}
+
+.cardList .cardLink:hover .cardButton{
+    color: var(--cor-neutra);
+    background-color: var(--cor-secundaria);
+}
+
+.swiper-pagination{
+    opacity: .7;
+}
+
+#avaliacoes{
+    margin-top: -420px;
+}
+
+.introAvaliacoes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introAvaliacoes img{
+    margin-bottom: .7rem;
+}
+
+.introAvaliacoes h1{
+    padding: .8rem 2rem;
+    border-bottom: 2px solid var(--cor-tercearia);
+}
+
+.estrelas{
+    width: 7rem;
+    margin-top: -25px;
+}
+
+.avaliacoesGrupo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 500px;
+}
+
+.containerAvaliativo{
+    display: flex;
+    margin-top: 2rem;
+    
+}
+
+#avaliacoesGrupo{
+    display: flex; 
+    list-style-type: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.avaliacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 300px;
+    border: 3px solid var(--cor-tercearia);
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;  
+}
+
+.avaliacao:hover {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.avaliacao:not(:hover) {
+    transform: scale(.95);
+}
+
+.avaliacao p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: -7px;
+}
+
+
+footer {
+    background-color: var(--cor-primaria);
+    width: 100%;
+}
+
+.contentFooter{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.3rem 0;
+    flex-wrap: wrap;
+}
+
+
+.bloco .indice{
+    font-weight: 600;
+    color: var(--cor-neutra);
+    padding: .5rem 0;
+}
+
+.bloco p{
+    color: var(--cor-neutra);
+}
+
+
+.contentFooter img {
+    width: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 730px) {
+    .navBar{
+        display: none;
+    }
+
+    .acesso{
+        display: none;
+    }
+
+    header{
+        width: 100%;
+        height: auto;
+        padding: 0.8rem 3rem;
+        
+    }
+
+    .containerHeader{
+        padding: 0.6rem;
+    }
+
+    #logoSite {
+        width:38%;
+        border-radius: 0.5rem;
+    }
+
+    .mobileIcon{
+        display: block;
+    }
+    
+    .mobileIcon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobileIcon button:hover{
+        background-color: var(--cor-neutra);
+        border-radius: 5px;
+    }
+
+
+    .open{
+        display: block;
+    }
+
+    
+    .mobileMenu ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--cor-neutra);
+
+    }
+
+    .listNav li{
+        list-style: none;
+        padding-top: 1.3rem;
+    }
+
+    .listNav li a{
+        text-decoration: none;
+        color: var(--cor-neutra);
+        font-size: 1.7rem;
+        font-weight: 600;
+        transition: font-size .6s ease-in-out;
+    }
+
+    .listNav li a:hover{
+        font-size: 2rem;
+        border-bottom: 5px solid var(--cor-tercearia);
+        border-radius: 2px;
+    }
+
+    #linkCadastroMobile {
+        text-decoration: none;
+        color: var(--cor-neutra);
+        font-size: 2rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        transition: background-color .7s ease-in-out;
+        transition: font-size .7s ease-in-out;
+    }
+
+    #linkCadastroMobile:hover{
+        background-color: var(--cor-tercearia);
+        font-size: 2.3rem;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    #linkLoginMobile {
+        text-decoration: none;
+        color: var(--cor-neutra);
+        font-size: 2rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        transition: background-color .7s ease-in-out;
+        transition: font-size .7s ease-in-out;
+
+    }
+
+    #linkLoginMobile:hover{
+        background-color: var(--cor-tercearia);
+        font-size: 2.3rem;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+
+    .slider{
+    display: none;
+    }
+
+    #sectionHome{
+        padding: 0;
+    }
+
+    .contentArticle{
+        margin-top: -7.3rem;
+        padding: .6rem ;
+    }
+
+    .contentArticle h1{
+        margin-top: .3rem;
+        font-size: 1.8em;
+    }
+
+    .contentArticle h2{
+        font-size: 1.8rem;
+    }
+
+    .contentArticle p{
+        margin: 1.5rem 0;
+    }
+
+    .contentArticle a{
+        padding: 1rem;
+    }
+
+    .containerServices{
+        position: absolute;
+        top: -530px;    
+    }
+
+    .cardWrapper{
+        margin: 0 10px 25px;
+    }
+
+    #avaliacoes{
+        margin-top: -450px;
+    }
+
+    .avaliacao{
+        width: 60%;
+        height: 400px;
+    }
+
+    .contentFooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+ 
+
+}
+
+@media screen and (min-width: 731px) and (max-width: 945.98px){
+
+    Header{ 
+        padding: 1.3rem 1.5rem;
+    }
+
+
+    #logoSite{
+        width: 13%;
+    }
+
+    .navBar ul li{
+        padding: .5rem;
+    }
+    
+    .navBar ul li a{
+        font-size: 1.3rem;
+    }
+
+    .navBar ul li a:hover{
+        font-size: 1.3rem;
+    }
+
+    .acesso a{
+        padding: 1rem;
+    }
+
+    .acesso #linkCadastro:hover{
+            font-size: 1.3rem;
+            border-left: 5px solid var(--cor-tercearia);
+        }    
+
+    .slider{
+        margin-top: 5.5rem;
+        width: 658px;
+    }
+
+    .slide{
+        width: 25%;
+        position: relative;
+        transition: 2s;
+    }
+    
+    .contentArticle{
+        margin-top: 1.7rem;
+    }
+
+    .avaliacao{
+        width: 45%;
+    }
+
+    
+}
+
+

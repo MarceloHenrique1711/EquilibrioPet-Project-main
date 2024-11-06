@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equilibrio Pet</title>
+    <link rel="stylesheet" href="../CSS/login.css" />
+    <script src="../JS/login.js" defer></script>
+  </head>
+  <body>
+    <div class="containerLogin">
+      <div class="headerLogin">
+        <h1>Acesse sua conta!</h1>
+            <a href="../index.html">Voltar</a>
+        </div>
+      <form>
+        <label for="emailLogin">Digite seu email:</label>
+        <input type="email" id="emailLogin" placeholder="exemplo@email.com" required />
+        <label for="passwordLogin">Digite sua senha:</label>
+        <input
+          type="password" id="passwordLogin" placeholder="******" required/>
+
+        <button type="button" onclick="loginUsuario()" id="submitLogin">Entrar</button>
+      </form>
+    </div>
+  </body>
+</html>
