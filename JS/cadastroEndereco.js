@@ -9,14 +9,11 @@ async function cadastroEndereco() {
     let rua = document.getElementById('rua').value;
     let numero = document.getElementById('numero').value;
     let complemento = document.getElementById('complemento').value;
-    let bairro = document.getElementById('bairro').value;
-    let cidade = document.getElementById('cidade').value;
-    let estado = document.getElementById('estado').value;
     let cep = document.getElementById('cep').value;
 
 
 
-    if (!title || !rua || !numero || !cidade || !estado || !cep) {
+    if (!title || !rua || !numero  || !cep) {
         alert("Preencha todos os campos obrigatórios.");
         button.disabled = false;
         button.innerText = 'Cadastrar Endereço';
@@ -28,9 +25,6 @@ async function cadastroEndereco() {
         "address": rua,
         "number": numero,
         "complement": complemento,
-        "district": bairro,
-        "city": cidade,
-        "state": estado,
         "cep": cep 
     };
 

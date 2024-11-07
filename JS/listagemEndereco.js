@@ -2,15 +2,16 @@ const urlEndereco = "https://go-wash-api.onrender.com/api/auth/address";
 
 async function listarEnderecos() {
     let token = localStorage.getItem('token');
+    
 
     try {
         const respostaApi = await fetch(urlEndereco, {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${token}`
-            }
-        });
+            },
 
+        });
         if (!respostaApi.ok) {
             const erroMessage = await respostaApi.text();
             throw new Error(`Erro ao obter endereços: ${erroMessage}`);
@@ -28,6 +29,7 @@ async function listarEnderecos() {
     }
 }
 
+
 function exibirEnderecos(enderecos) {
     const listaEnderecos = document.getElementById('containerEnderecos');
     listaEnderecos.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
@@ -41,7 +43,9 @@ function exibirEnderecos(enderecos) {
 
     enderecos.forEach(endereco => {
         const item = document.createElement('li');
-        item.textContent = `${endereco.title} - ${endereco.address}, ${endereco.number}, ${endereco.city}, ${endereco.state} - ${endereco.cep} `;
+        //item.textContent = `${endereco.title} - ${endereco.formatted_address}`;
+        item.textContent = `${endereco.title} - ${endereco.address}, ${endereco.number} - ${endereco.cep}` ;
+
 
         // Cria o botão de exclusão
         const botaoExcluir = document.createElement('button');
@@ -101,9 +105,9 @@ async function alterarEndereco(id) {
         }
 
         const endereco = await respostaApi.json();
-        console.log("Endereço encontrado:", endereco);
-        localStorage.setItem('enderecoParaEditar', JSON.stringify(endereco)); // Salva o endereço no localStorage
         
+        localStorage.setItem('enderecoParaEditar', JSON.stringify(endereco)); // Salva o endereço no localStorage
+        location.href = "../HTML/editarEnd.html";
 
         
     } catch (error) {

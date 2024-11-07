@@ -15,7 +15,7 @@
             <h1>Editar Endereço!</h1>
             <a href="home.html">Voltar</a>
         </div>
-        <form>
+        <form id="formEditarEndereco">
             <div class="inputBox">
                 <label for="title">Que endereço é esse?</label>
                 <input type="text" id="title" placeholder="Ex: Minha casa" required>
@@ -36,24 +36,12 @@
                 <label for="complemento">Complemento:</label>
                 <input type="text" id="complemento" placeholder="Complemento">
             </div>
-            <div class="inputBox">
-                <label for="bairro">Bairro:</label>
-                <input type="text" id="bairro" placeholder="Bairro">
-            </div>
-            <div class="inputBox">
-                <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" placeholder="Cidade" required>
-            </div>
-            <div class="inputBox">
-                <label for="estado">Estado:</label>
-                <input type="text" id="estado" placeholder="Estado" required>
-            </div>
             <div class="inputBox" id="inputCheck">
                 <input type="checkbox" id="termo"> 
                 <a href="#" id="terms">Aceitar termos de condoções e uso.</a>
             </div>
             <div class="buttonCadastro">
-                <button type="button" id="botaoCadastroEndereco" onclick="cadastroEndereco()">Editar Endereço</button>
+                <button type="button" id="botaoAtualizarEndereco" onclick="atualizarEndereco()">Editar Endereço</button>
             </div>
             
         </form>
